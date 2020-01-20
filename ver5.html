@@ -1,0 +1,579 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>박서희  Seohui Park </title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	opacity: 0.5;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, KaiTi, STKaiTi, '华文楷体', KaiTi_GB2312, '楷体_GB2312', serif; }
+.mono { font-family: Nitti, 'Microsoft YaHei', '微软雅黑', monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, KaiTi, STKaiTi, '华文楷体', KaiTi_GB2312, '楷体_GB2312', serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, Nitti, 'Microsoft YaHei', '微软雅黑', monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="09131b51-cf6a-4853-98f5-fe8928c20cce" class="page sans"><header><h1 class="page-title">박서희  Seohui Park </h1></header><div class="page-body"><p id="336d8297-ba6a-41cf-af4d-ceb139fc80f1" class="">
+</p><h1 id="263ecaea-9cb7-408a-b543-ff55cb255043" class="">Profile</h1><hr id="4ee8844b-7001-46ad-b690-bafda3f21072"/><ul id="820152ab-e6d7-437f-b2d8-53e773764787" class="bulleted-list"><li>Birth : 1995. 08. 26 </li></ul><ul id="dddc65fc-ed4f-4232-8f03-b2a9f8673e13" class="bulleted-list"><li>Email : seohuipark95@gmail.com, huidea95@skku.edu</li></ul><ul id="559cd171-8c10-45af-96d1-56b5d5a2bdb6" class="bulleted-list"><li>Mobile : 010 - 6684 - 8711</li></ul><ul id="7fd4116d-4a0a-4a34-ae82-e8834be8c0df" class="bulleted-list"><li>Affiliation : 성균관대학교 ING Lab <a href="https://inglab.github.io/people.html">[Link]</a></li></ul><ul id="e63649f0-3438-4b01-a015-a3cb2fac17d7" class="bulleted-list"><li>Last Update : 2020. 01</li></ul><p id="0c6e10e7-bef4-40f7-b2f5-8b8f247ae78b" class="">
+</p><h1 id="c06073e9-d92e-41cf-bd4c-58dd9fdd0e2f" class="">Education</h1><hr id="d8f03403-fae0-4b3a-94ed-fa8d999e0d26"/><ul id="31582aaf-583c-4136-a4a2-8ca1175725c5" class="bulleted-list"><li>성균관대학교  Sungkyunkwan University <p id="ff7a720e-8186-4b33-a3b8-3cc67b82c1b2" class="">데이터사이언스융합학과 석사 과정 (2019.03 ~ 2020.07, 7월 졸업예정)  </p><p id="9b524a79-5058-40db-96b5-8726b6fbab45" class="">M.S candidate in Applied Data Science </p></li></ul><p id="efffd563-2312-44e4-b885-a71dc7439d20" class="">
+</p><ul id="a6c89333-530d-4943-bf93-2ad7995a83f1" class="bulleted-list"><li>인하대학교 Inha University<p id="f4c37a45-f18d-4532-ab4e-fb8088a027d4" class="">문화콘텐츠학과 (언론정보학 복수전공) (2014.03 ~ 2019.02)</p><p id="f0d54a2c-f52c-413f-bbc8-9150a2e842de" class="">B.S. in Cultural contents and Media</p></li></ul><p id="fe6ec1a6-473d-49ec-99ef-55825b08a8fc" class="">
+</p><p id="f32a13dc-b9df-4b82-a9c6-aae9e576c522" class="">
+</p><h1 id="f6bb314a-201c-4e26-a2f0-233b2ccd5b09" class="">Research Paper</h1><hr id="cfa106e9-f512-4c3d-b785-49714c4cb2e6"/><ul id="84104086-797d-4dc8-ab94-60b1caa82031" class="toggle"><li><details open=""><summary> &quot;Emotion Recognition from Text Stories Using an Emotion Embedding model&quot;</summary><ul id="58a4f3ca-01d9-46d8-af39-8ad2a8951bd3" class="bulleted-list"><li>Seo-hui Park*, Yun-Gyung Cheong and Byung-Chull Bae</li></ul><ul id="ba6f84fe-f515-41d4-821a-5d4bbfe58aaa" class="bulleted-list"><li>MEGA Workshop February 19, 2020. Busan, Korea.</li></ul><p id="3fb218a8-8091-4d83-9bd6-be0c45fb8c29" class="">
+</p></details></li></ul><ul id="ab6c24ec-0860-431b-9c89-3999048b1f4f" class="toggle"><li><details open=""><summary> &quot;Emotion-based Story Event Clustering&quot;</summary><ul id="68c3ce03-4c0b-44fd-ba31-7c485c538c4c" class="bulleted-list"><li>Hye-Yeon Yu*, Seo-hui Park, Yun-Gyung Cheong, Moon-Hyun Kim and Byung-Chull Bae</li></ul><ul id="be598c61-57ff-4591-9bdc-4b194b5ef34b" class="bulleted-list"><li>International Conference on Interactive Digital Storytelling, 2019. Utah, US. </li></ul><ul id="21b50b2c-78e2-4ad6-adb7-136fac59ddc3" class="bulleted-list"><li><a href="https://link.springer.com/chapter/10.1007/978-3-030-33894-7_36">[PDF link]</a></li></ul><p id="f4f69926-b85f-4a41-99fc-7736dbe4283f" class="">
+</p></details></li></ul><ul id="04a91aba-014c-4655-93a1-096a1b38d0c6" class="toggle"><li><details open=""><summary>&quot;텍스트 스토리에서 이벤트 추출 및 표현 방법 연구, A study of methods for extracting and representing events from text story&quot;</summary><ul id="b53818a0-c30e-444c-b393-dc283541b802" class="bulleted-list"><li>Seo-hui Park*, Hye-Yeon Yu, Yun-Gyung Cheong and Byung-Chull Bae</li></ul><ul id="eefd3a1a-f115-4899-bbfe-75880efd6c77" class="bulleted-list"><li>Korea Computer Congress 2019, Jeju, Korea.</li></ul><ul id="76bcfaef-db77-4e6c-a558-f3bfee16f78b" class="bulleted-list"><li><a href="http://www.riss.kr/search/detail/DetailView.do?p_mat_type=1a0202e37d52c72d&amp;control_no=531051dfafeec2e647de9c1710b0298d">[PDF link]</a></li></ul></details></li></ul><p id="63c4d4e7-abe4-4224-beed-2a533e1cd949" class="">
+</p><h1 id="ca351f80-f990-42ef-b6f5-2356be7e1fb5" class="">Award</h1><hr id="8783e4ab-8f37-4155-8b69-91ec92edd701"/><ul id="639ae260-e906-4b6e-a542-50a636adfb10" class="bulleted-list"><li>한국콘텐츠진흥원 2019 AI : Storyteller 최종 1등 수상 (2019.12)</li></ul><ul id="93008e07-b7f1-486f-9cff-38a7d7f1aa3b" class="bulleted-list"><li>한국가스공사(KOGAS) 빅데이터인공지능 스타트업 경진대회 특별상 수상 (2019.11)</li></ul><ul id="b3ee08c2-6f3e-4b80-9928-760d3a7b9e51" class="bulleted-list"><li>성균관대학교 데이터사이언스융합학과 특별상 수상 (2019.12)</li></ul><ul id="e7600075-fd3b-4b0d-9b2d-4d318fcbe6ee" class="bulleted-list"><li>빅데이터 소셜마케팅 분석보고서 공모전 최우수상 수상 (한국정보화진흥원원장상) (2018.08)</li></ul><ul id="67c5be05-c1a3-4d2f-bc84-bde688f7bcf0" class="bulleted-list"><li>서울시설공단 서비스경험.아이디어 공모전 최우수상 수상 (2018.08)</li></ul><ul id="00b9ce74-9330-4ff4-84ee-220ba5a94fa7" class="bulleted-list"><li>창성장학회 성적우수상 수상 (2016.05)</li></ul><p id="1bd2f076-4699-4150-9afb-c545254072f8" class="">
+</p><p id="4f93466c-ec8b-481d-ad89-86237b3056e5" class="">
+</p><h1 id="ea40e8b4-a679-459d-bca8-95596dd9ff39" class="">Project</h1><hr id="db47b4de-687a-419c-85a3-6c47965d6d93"/><ul id="01fc363c-fe57-4462-8326-3e21296ed81a" class="toggle"><li><details open=""><summary>한국콘텐츠진흥원 2019 AI : Storyteller  -  Story Keyword Maker API 개발</summary><ul id="c131d57a-10ae-4eef-b0ee-83a49bcb224a" class="bulleted-list"><li><code>Deep Learning</code> <mark class="highlight-blue"><code>Web</code></mark> <mark class="highlight-purple"><code>Text data Analysis</code></mark><mark class="highlight-teal"> </mark></li></ul><ul id="28730ab2-a093-4170-ae20-cb0bff53036e" class="bulleted-list"><li>2019 AI : Storyteller 최종 1등 수상 ( 한국콘텐츠진흥원 후원 )</li></ul><ul id="0b3a07b4-e759-4f9e-b92a-928a523ad8e0" class="bulleted-list"><li>스토리 관련 단어/문장을 입력했을 때 연관된 키워드/문장이 반환되는 API 구현</li></ul><ul id="61770dcf-199c-4550-9cab-fe72e6882ebc" class="bulleted-list"><li>방송 시나리오 28,282편을 데이터베이스화 한 뒤 word2vec, tfidf, GRU 학습</li></ul><ul id="b6449efd-8c64-421a-858c-2a276a67ba8a" class="bulleted-list"><li>전문 작가가 API를 사용해 시나리오 작성하며 성능 분석</li></ul><ul id="ff8b502c-32bd-4dac-9742-39563fd61e9a" class="bulleted-list"><li>콘텐츠 크리에이터와 협업하여 웹툰, 무빙툰, 웹드라마 제작 </li></ul><ul id="fe83ec54-5c9d-454f-8e5c-d5330cd5b60c" class="bulleted-list"><li><a href="http://18.224.137.1/">[API Link]</a>, <a href="https://drive.google.com/file/d/1xa1gTL_xcxF8AMdNcuOuHIqwMEBWUNdo/view">[Contents Link 1]</a>, <a href="https://www.youtube.com/watch?v=cHZSOHHvGSQ">[Contents Link 2]</a></li></ul><p id="81dceee9-e625-4aba-b419-ccd0c09ed6f7" class="">
+</p></details></li></ul><ul id="db119dbd-5d4c-4e97-b3a7-e6a426f90737" class="toggle"><li><details open=""><summary> 한국가스공사 (KOGAS) 빅데이터 인공지능 스타트업 경진대회</summary><ul id="30c10954-3977-4355-a992-274fe2a6e4a3" class="bulleted-list"><li><code>Deep Learning</code> <mark class="highlight-pink"><code>Machine Learning</code></mark><mark class="highlight-teal"> </mark><mark class="highlight-brown"><code>Sensor data Analysis</code></mark><mark class="highlight-teal"> </mark></li></ul><ul id="b415d0a3-6801-442c-8198-b3f170420027" class="bulleted-list"><li>한국가스공사(KOGAS) 빅데이터인공지능 스타트업 경진대회 특별상 수상</li></ul><ul id="ec3b0d17-8988-43f8-8610-fc67befc7219" class="bulleted-list"><li>가스 펌프의 실제 계측 데이터를 분석, 펌프별 일일 에너지 사용량 예측 모델 설계</li></ul><ul id="452c3ef3-3536-4785-b545-9aebb856238e" class="bulleted-list"><li>예측 모델을 기반으로 효율적인 펌프 운용 알고리즘 제시 </li></ul><ul id="40cafdab-7207-4788-b54c-240994511fca" class="bulleted-list"><li>머신러닝 (Ridge Regression, Lasso Regression, ElasticNet), 딥러닝 (DNN, LSTM) 학습 적용</li></ul><ul id="670c864d-2752-44f2-bad8-482ee4e38944" class="bulleted-list"><li><a href="https://sci-cube.skku.edu/sci-cube/community/news.do?mode=view&amp;articleNo=87619">[News Link]</a> </li></ul><p id="82af998a-aafc-48d1-94fd-e1a891f6c488" class="">
+</p></details></li></ul><ul id="605e3232-cb2e-4ef8-9243-8542c41c6267" class="toggle"><li><details open=""><summary> 빅데이터 소셜마케팅 분석보고서 공모전  - 헤어케어 제품 마케팅 전략 수립</summary><ul id="cdc7abf7-7abd-4aec-997f-44995a9084a6" class="bulleted-list"><li><mark class="highlight-purple"><code>Text data Analysis</code></mark><mark class="highlight-teal"> </mark><mark class="highlight-blue"><code>Crawling</code></mark><mark class="highlight-blue"> </mark><mark class="highlight-yellow"><code>Project Management</code></mark></li></ul><ul id="23f96f1a-e5ba-427d-acad-978b255a6ada" class="bulleted-list"><li>시장 및 기업 데이터를 기반으로 헤어케어 제품의 동향 분석</li></ul><ul id="149ea6b2-94b4-4ef2-9288-31dc7667c003" class="bulleted-list"><li>SNS 외부 데이터 크롤링, 텍스트 데이터 감정 분석 및 키워드 분석 진행 </li></ul><ul id="bf6995e6-cd78-434a-9bc7-46945e9f3399" class="bulleted-list"><li>새로운 타켓 고객과 마케팅 방향 제시 </li></ul><ul id="c497bf5a-7af1-43cf-a266-f8a8d1943b21" class="bulleted-list"><li><a href="Seohui%20Park/______.pdf">[Pdf file Link]</a></li></ul><p id="477d71bb-acf2-49c3-9433-67e8dac1738d" class="">
+</p></details></li></ul><ul id="33a845df-ad9b-42d5-aa8f-a2a7b15f1994" class="toggle"><li><details open=""><summary> 서울시설공단 서비스경험.아이디어 공모전 - 서울시 공공자전거 따릉이 개선안 제시</summary><ul id="2f35ba53-c201-4261-b74a-9e7f7fd73004" class="bulleted-list"><li><mark class="highlight-purple"><code>Text data Analysis</code></mark><mark class="highlight-teal"> </mark><mark class="highlight-blue"><code>Crawling</code></mark><mark class="highlight-blue"> </mark><mark class="highlight-yellow"><code>Project Management</code></mark> </li></ul><ul id="f86928a8-a988-4be6-8f22-ad250b5721d5" class="bulleted-list"><li>서울시설공단 웹사이트, SNS 외부 사이트 따릉이 이용 후기 수집 </li></ul><ul id="f45a8980-6524-4c8e-941a-79366aad89cf" class="bulleted-list"><li>텍스트 데이터 감정 분석, 키워드 분석 진행 </li></ul><p id="02e8a7e5-9165-4f44-b0dc-613555043a95" class="">
+</p></details></li></ul></div></article></body></html>
