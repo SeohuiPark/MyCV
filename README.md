@@ -1,2 +1,0 @@
-# MyCV
-for testing
